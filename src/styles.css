@@ -82,3 +82,31 @@ button:active {
   align-items: center;
   gap: 8px;
 }
+
+#overlay {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 0 16px;
+  z-index: 1;
+  background-color: rgba(193, 199, 208, 0.45);
+  backdrop-filter: blur(5px);
+  height: 100vh;
+}
+
+#modal {
+  margin: auto;
+  max-width: 600px;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+  padding: 16px;
+  overflow: auto;
+}
