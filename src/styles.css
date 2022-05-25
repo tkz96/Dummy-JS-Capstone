@@ -21,10 +21,6 @@ h2 {
   margin: 0;
 }
 
-img {
-  width: 240px;
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -47,10 +43,23 @@ header li {
   font-size: 2rem;
 }
 
-input {
+input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  border-color: #cfd8dc;
+  padding: 15px 38px 15px 16px;
   border: 2px solid black;
   height: 2rem;
   font-size: 1.5rem;
+}
+
+textarea {
+  resize: vertical;
+  height: 170px;
 }
 
 button {
@@ -83,6 +92,10 @@ button:active {
   gap: 8px;
 }
 
+.info-card img {
+  width: 240px;
+}
+
 #overlay {
   display: none;
   position: fixed;
@@ -101,12 +114,26 @@ button:active {
 }
 
 #modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: auto;
-  max-width: 600px;
+  gap: 8px;
   position: relative;
   background-color: #fff;
   border: 1px solid #dfe1e6;
   border-radius: 16px;
   padding: 16px;
   overflow: auto;
+}
+
+#modal li {
+  list-style: none;
+}
+
+#modal-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
